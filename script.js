@@ -9,14 +9,13 @@ board.className = 'board';
 body.insertBefore(board, body.firstChild);
 
 for (var i = 1; i <= Math.pow(9,2); i++) {
+  var color1 = Math.floor(Math.random() * 255 + 1);
+  var color2 = Math.floor(Math.random() * 255 + 1);
+  var color3 = Math.floor(Math.random() * 255 + 1);
   var tile = document.createElement('div');
   tile.style.width = '11.1vw';
   tile.style.height = '11.1vw';
   tile.style.float = 'left';
-  if(i % 2 === 0){
-    tile.style.backgroundColor = 'red';
-  }else{
-    tile.style.backgroundColor = 'black';
-  }
+  tile.style.backgroundColor = 'rgb(' + color1 + ',' + color2 + ',' + color3 + ')'
   board.appendChild(tile);
 }
