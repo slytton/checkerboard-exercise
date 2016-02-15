@@ -4,6 +4,12 @@ var body = document.getElementsByTagName('body')[0];
 var board = null;
 var boardWidth = 9;
 
+var audio = document.createElement('audio');
+audio.src = 'audio/superMario.mp3';
+audio.autoplay = true;
+audio.repeat = true;
+body.appendChild(audio)
+
 setColors();
 window.setInterval(setColors, 2000);
 
